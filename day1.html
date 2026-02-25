@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Anurag Sharma | Futuristic Developer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:'Orbitron',sans-serif;
+    background:#000;
+    color:white;
+    overflow-x:hidden;
+}
+
+#particles-js{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+.navbar{
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.glow{
+    color:#00ffff;
+    text-shadow:0 0 10px #00ffff,
+                0 0 20px #00ffff,
+                0 0 40px #00ffff;
+}
+
+.section-padding{
+    padding:100px 0;
+}
+
+/* 3D Cube */
+.cube-container{
+    perspective:1000px;
+    width:200px;
+    height:200px;
+    margin:auto;
+}
+
+.cube{
+    width:200px;
+    height:200px;
+    position:relative;
+    transform-style:preserve-3d;
+    animation:rotate 12s infinite linear;
+}
+
+.cube div{
+    position:absolute;
+    width:200px;
+    height:200px;
+    background:rgba(0,255,255,0.15);
+    border:2px solid #00ffff;
+}
+
+.front{transform:translateZ(100px);}
+.back{transform:rotateY(180deg) translateZ(100px);}
+.right{transform:rotateY(90deg) translateZ(100px);}
+.left{transform:rotateY(-90deg) translateZ(100px);}
+.top{transform:rotateX(90deg) translateZ(100px);}
+.bottom{transform:rotateX(-90deg) translateZ(100px);}
+
+@keyframes rotate{
+0%{transform:rotateX(0) rotateY(0);}
+100%{transform:rotateX(360deg) rotateY(360deg);}
+}
+
+/* Tilt Cards */
+.tilt-card{
+    background:rgba(255,255,255,0.05);
+    padding:30px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+}
+
+.skill-link{
+    color:#00ffff;
+    text-decoration:none;
+}
+.skill-link:hover{
+    text-shadow:0 0 10px #00ffff;
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark fixed-top">
+<div class="container">
+<a class="navbar-brand glow">Anurag Sharma</a>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+<div>
+<h1 class="display-3 glow" data-aos="zoom-in">FUTURISTIC DEVELOPER</h1>
+<p data-aos="fade-up">3rd Year B.Tech | Full Stack Developer</p>
+
+<div class="cube-container mt-5" data-aos="flip-left">
+<div class="cube">
+<div class="front"></div>
+<div class="back"></div>
+<div class="right"></div>
+<div class="left"></div>
+<div class="top"></div>
+<div class="bottom"></div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Skills Section -->
+<section class="section-padding text-center">
+<div class="container">
+<h2 class="glow mb-5" data-aos="fade-down">Skills & Live Projects</h2>
+
+<div class="row">
+
+<div class="col-md-4 mb-4" data-aos="fade-up">
+<div class="tilt-card" data-tilt>
+<h4>C++</h4>
+<a class="skill-link" href="https://visualgo.net/en" target="_blank">
+Open Live Data Structure Visualizer →
+</a>
+</div>
+</div>
+
+<div class="col-md-4 mb-4" data-aos="fade-up">
+<div class="tilt-card" data-tilt>
+<h4>Python</h4>
+<a class="skill-link" href="https://streamlit.io/gallery" target="_blank">
+Open Live Streamlit Apps →
+</a>
+</div>
+</div>
+
+<div class="col-md-4 mb-4" data-aos="fade-up">
+<div class="tilt-card" data-tilt>
+<h4>JavaScript</h4>
+<a class="skill-link" href="https://todomvc.com/examples/react/#/" target="_blank">
+Open Live Todo App →
+</a>
+</div>
+</div>
+
+<div class="col-md-4 mb-4" data-aos="fade-up">
+<div class="tilt-card" data-tilt>
+<h4>HTML & CSS</h4>
+<a class="skill-link" href="https://colorlib.com/wp/templates/" target="_blank">
+Open Live Website Templates →
+</a>
+</div>
+</div>
+
+<div class="col-md-4 mb-4" data-aos="fade-up">
+<div class="tilt-card" data-tilt>
+<h4>Bootstrap</h4>
+<a class="skill-link" href="https://getbootstrap.com/docs/5.3/examples/" target="_blank">
+Open Bootstrap Live Examples →
+</a>
+</div>
+</div>
+
+<div class="col-md-4 mb-4" data-aos="fade-up">
+<div class="tilt-card" data-tilt>
+<h4>Full Stack</h4>
+<a class="skill-link" href="https://react-admin-demo.marmelab.com/" target="_blank">
+Open Live Admin Dashboard →
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section class="section-padding text-center">
+<div class="container">
+<h2 class="glow" data-aos="zoom-in">Contact</h2>
+<p data-aos="fade-up">Email: anurag@example.com</p>
+</div>
+</section>
+
+<footer class="text-center p-4">
+<p>© 2026 Anurag Sharma | Futuristic Portfolio</p>
+</footer>
+
+<!-- Scripts -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Particles -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+particlesJS("particles-js",{
+  particles:{number:{value:80},size:{value:3},line_linked:{enable:true},move:{speed:3}}
+});
+</script>
+
+<!-- Tilt -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script>
+VanillaTilt.init(document.querySelectorAll(".tilt-card"),{
+max:25,
+speed:400,
+glare:true,
+"max-glare":0.5
+});
+</script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
+</body>
+</html>
