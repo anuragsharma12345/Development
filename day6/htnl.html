@@ -6,43 +6,101 @@
 <title>Dark Light Mode</title>
 
 <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-    background-color: white;
-    color: black;
-    font-family: Arial, sans-serif;
-    transition: 0.3s;
+    background-color:#f4f6f9;
+    color:#333;
+    font-family:Arial, sans-serif;
+    transition:0.4s;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:500px;
+    text-align:center;
+    padding:30px;
+    border-radius:10px;
+    background:white;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 .dark{
-    background-color: black;
-    color: white;
+    background:#121212;
+    color:white;
+}
+
+.dark .container{
+    background:#1e1e1e;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+p{
+    margin-top:20px;
+    line-height:1.6;
 }
 
 button{
-    padding:10px 20px;
+    margin-top:15px;
+    padding:10px 25px;
+    border:none;
+    border-radius:6px;
     font-size:16px;
     cursor:pointer;
+    background:#4CAF50;
+    color:white;
+    transition:0.3s;
 }
+
+button:hover{
+    background:#3b9440;
+}
+
+footer{
+    margin-top:25px;
+    font-size:14px;
+    color:gray;
+}
+
 </style>
 
 </head>
 
 <body>
 
-<h1 id="heading-id">hello</h1>
+<div class="container">
+
+<h1>About Us</h1>
 
 <button id="mode-btn">Dark Mode</button>
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum cum dolore voluptates quibusdam vero!
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, nihil. 
+Minima aut optio vel nam recusandae. Quis nesciunt repellat ducimus 
+incidunt error, est rerum sapiente, aliquid culpa officia expedita 
+nisi dolores.
 </p>
+
+<footer>
+<h3>hello thank you for coming</h3>
+</footer>
+
+</div>
 
 <script>
 
-const heading = document.getElementById("heading-id");
 const button = document.getElementById("mode-btn");
-
-heading.innerText = "bhavya";
 
 button.addEventListener("click", function(){
 
