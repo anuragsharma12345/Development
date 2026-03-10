@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button-id">Click</button>
+<p id="para">0</p>
+</body>
+<script>
+const button = document.getElementById("button-id");
+const para = document.getElementById("para");
+
+button.addEventListener("click", function(){
+    para.innerText = parseInt(para.innerText) + 1;
+});
+</script>
+
+</html>
