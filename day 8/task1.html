@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<body>
+    <style>
+        body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2{
+    color: #333;
+}
+
+input{
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#button-id{
+    padding: 10px 15px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#button-id:hover{
+    background-color: #45a049;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li{
+    background: white;
+    padding: 10px;
+    margin: 10px auto;
+    width: 300px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li button:hover{
+    background-color: darkred;
+}
+    </style>
+    <h2>Task List</h2>
+
+    <input type="text" id="input-id" placeholder="Enter task">
+<button id="button-id">Add Task</button>
+
+<ul id="list"></ul>
+    
+</body>
+<script>
+
+const input = document.querySelector("#input-id")
+const button = document.querySelector("#button-id")
+const list = document.querySelector("#list")
+
+button.addEventListener("click", function () {
+
+    const taskText = input.value
+
+    if(taskText === "") return
+
+    const li = document.createElement("li")
+    li.textContent = taskText
+
+    const delBtn = document.createElement("button")
+    delBtn.textContent = "Delete"
+
+    li.appendChild(delBtn)
+    list.appendChild(li)
+
+    input.value = ""
+})
+
+list.addEventListener("click", function(e){
+
+    if(e.target.tagName === "LI"){
+        e.target.style.textDecoration = "line-through"
+    }
+
+    if(e.target.tagName === "BUTTON"){
+        e.target.parentElement.remove()
+    }
+})
+
+
+</script>
+
+</html>
